@@ -101,7 +101,6 @@ getEl('btnXetDiem').addEventListener('click', xetDiemTotNghiep);
 var xuatHoaDon = getEl('xuatHoaDon');
 var tinhTienDien = function(ipTen, soKw) {
     var tinhTienDien = 0;
-    debugger;
     if (soKw <= 50) {
         tinhTienDien = 500 * soKw;
     } else if (soKw > 50 && soKw <= 100) {
