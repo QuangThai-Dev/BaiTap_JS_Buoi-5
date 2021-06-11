@@ -111,7 +111,7 @@ var tinhTienDien = function(ipTen, soKw) {
     } else if (soKw > 200 && soKw <= 350) {
         tinhTienDien = (500 * 50) + (50 * 650) + (100 * 850) + ((soKw - 150) * 1100);
     } else {
-        tinhTienDien = (500 * 50) + (50 * 650) + (100 * 850) + (150 * 1100) + ((soKw - 350) * 1300);
+        tinhTienDien = (500 * 50) + (50 * 650) + (100 * 850) + (200 * 1100) + ((soKw - 350) * 1300);
     }
     return tinhTienDien;
 }
