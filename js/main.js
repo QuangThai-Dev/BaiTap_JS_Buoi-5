@@ -1,3 +1,23 @@
+// Bài 1
+/**
+ * B1:Input
+ *  -   Nhập điểm hội đồng và điểm ba môn thi
+ *  -   Chọn khu vưc và đối tượng ưu tiên
+ * B2:Handle
+ *  -   Tạo biến diemKhuVuc, diemDoiTuong sau đó tạo hàm checkKhuVuc() và hàm checkDoiTuong() để kiểm tra sinh viên thuộc khu vực và đối tượng nào
+ *  -   Trong hàm checkKhuVuc() Nếu sinh viên chọn khu vực A thì diemKhuVuc = 2.Nếu sinh viên chọn khu vực B thì diemKhuVuc = 1. Nếu sinh viên chọn khu vực C thì diemKhuVuc = 0.2. Nếu sinh viên chọn khu vực X thì diemKhuVuc = 0
+ *  -   Trong Ham checkDoiTuong() để kiểm tra sinh viên chọn đối tượng 1 thì diemDoiTuong = 2.5. Nếu sinh viên chọn đối tượng 2 thì diemDoiTuong = 1.5. Nếu sinh viên chọn đối tượng 3 thì diemDoiTuong = 1. Nếu sinh viên chọn điểm đối tượng 0 thì diemDoiTuong = 0
+ *  -   Tạo hàm tinhDiemTrungBinh(). Trong hàm tinhDiemTrungBinh() chứa diemToan, diemLy, diemHoa. tạo biến diemTrungBinh 
+ *  -   diemTrungBinh = diemToan + diemLy + diemHoa + diemDoiTuong + diemKhuVuc
+ *  -   Tạo hàm xetDiemTotNghiep() để xét điểm tốt nghiệp của sinh viên 
+ *  -   Nếu diemChuan <= diemTrungBinh và các điểm toán lý hóa khác 0 thì bạn đã đậu tốt nghiệp
+ * -    Ngược lại thì bạn rớt tốt nghiệp
+ * B3: Output
+ * -    Xuất thông tin
+ * 
+ */
+
+
 var getEl = function(id) {
     return document.getElementById(id);
 }
@@ -98,6 +118,20 @@ var xetDiemTotNghiep = function() {
 getEl('btnXetDiem').addEventListener('click', xetDiemTotNghiep);
 
 // Bài 2:
+/**
+ * B1:Input
+ *  -   Nhập tên sinh viên 
+ *  -   Nhập số kw sử dụng
+ * B2: Handle
+ *  - Tạo biến tính tiền điện , biến ipTen và biến soKw
+ *  - Nếu soKw <= 50 thì tinhTienDien = 500 * soKw
+ *  - Nếu soKw > 50 && soKw <= 100 thì tinhTienDien = (500 * 50) + ((soKw - 50) * 650)
+ *  - Nếu soKw > 100 && soKw <= 200 thì  tinhTienDien = (500 * 50) + (50 * 650) + ((soKw - 100) * 850)
+ *  - Nếu soKw > 200 && soKw <= 350 thì tinhTienDien = (500 * 50) + (50 * 650) + (100 * 850) + ((soKw - 150) * 1100)
+ *  - Còn lại thì tinhTienDien = (500 * 50) + (50 * 650) + (100 * 850) + (200 * 1100) + ((soKw - 350) * 1300)
+ * B3: Output
+ *  - Xuất thông tin tiền điện sử dụng
+ */
 var xuatHoaDon = getEl('xuatHoaDon');
 var tinhTienDien = function(ipTen, soKw) {
     var tinhTienDien = 0;
