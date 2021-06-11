@@ -60,6 +60,10 @@ var xetDiemTotNghiep = function() {
         alert('Yêu cầu bạn nhập số!!');
         return;
     }
+    if (diemChuan <= 0 || diemChuan > 30) {
+        alert('Yêu cầu nhập lại điểm chuẩn!!')
+        return;
+    }
     if (diemToan < 0 || diemToan > 10) {
         alert('Bạn nhập sai điểm Toán. Yêu cầu nhập lại!');
         return;
