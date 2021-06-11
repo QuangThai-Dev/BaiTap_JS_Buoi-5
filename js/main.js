@@ -103,11 +103,11 @@ var tinhTienDien = function(ipTen, soKw) {
     var tinhTienDien = 0;
     if (soKw <= 50) {
         tinhTienDien = 500 * soKw;
-    } else if (soKw > 50 && soKw <= 100) {
+    } else if (soKw > 50 && soKw < 100) {
         tinhTienDien = (500 * 50) + ((soKw - 50) * 650);
-    } else if (soKw > 100 && soKw <= 200) {
+    } else if (soKw > 100 && soKw < 200) {
         tinhTienDien = (500 * 50) + (50 * 650) + ((soKw - 100) * 850);
-    } else if (soKw < 200 && soKw <= 350) {
+    } else if (soKw < 200 && soKw < 350) {
         tinhTienDien = (500 * 50) + (50 * 650) + (100 * 850) + ((soKw - 150) * 1100);
     } else {
         tinhTienDien = (500 * 50) + (50 * 650) + (100 * 850) + (150 * 1100) + ((soKw - 350) * 1300);
